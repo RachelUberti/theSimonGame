@@ -6,6 +6,18 @@ let buttonColours = ["red", "blue", "green", "yellow"];
 // a new empty array
 let gamePattern = [];
 
+// jQuery to detect when any of the buttons are clicked and trigger a handler function.
+$(".btn").click(function() {
+
+// A variable to store the id of the button that got clicked.
+var userChosenColour = $(this).attr("id");
+
+userClickedPattern.push(userChosenColour);
+
+//console.log(userClickedPattern);
+
+});
+
 // A function to generate a new random number between 0 and 3, stored in a variable called randomNumber
 function nextSequence() {
     let randomNumber = Math.floor(Math.random() *4);
